@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "country": "Turkey",
+        "destination": "Grand Turkey",
+        "img": "https://themegoods-cdn-pzbycso8wng.stackpathdns.com/altair/demo/wp-content/uploads/2014/10/1600x1200-6-560x460.jpg",
+        "about": "Turkey is an insanely beautiful country. Surrounded by water on three sides, the coasts of Turkey are some of the most beautiful in the world. With crystal clear waters, fantastic beaches, and quaint fishing villages, the Turkish coast is one of the most pristine in the world."
+    },
+    {
+        "id": 2,
+        "country": "Spain",
+        "destination": "Grand Spain Madrid",
+        "img": "https://themegoods-cdn-pzbycso8wng.stackpathdns.com/altair/demo/wp-content/uploads/2014/05/1600x1200-8-560x460.jpg",
+        "about": "Madrid is one of the most beautiful cities in Spain and its capital is the heart of the country.Within its boundaries you'll find a range of cultural and historical treasures such as the Royal Palace,Royal Theater along with numerous museums and art galleries that are unmatched elsewhere in Europe."
+    }
+]

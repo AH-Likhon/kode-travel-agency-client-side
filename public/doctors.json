@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Dr. Eleonore Grey",
+        "position": "Senior Doctor",
+        "doctorImg": "http://dentario.themerex.net/wp-content/uploads/2016/01/team_3-182x182.jpg",
+        "aboutDoctor": "Types of bridges may vary, depending upon how they are fabricated."
+    },
+    {
+        "id": 2,
+        "name": "Dr. Joseph Phillips",
+        "position": "Senior Doctor",
+        "doctorImg": "http://dentario.themerex.net/wp-content/uploads/2016/01/team_2-182x182.jpg",
+        "aboutDoctor": "Types of bridges may vary, depending upon how they are fabricated."
+    },
+    {
+        "id": 3,
+        "name": "Dr. Lisa Casey",
+        "position": "Junior Doctor",
+        "doctorImg": "http://dentario.themerex.net/wp-content/uploads/2016/01/team_1-182x182.jpg",
+        "aboutDoctor": "Types of bridges may vary, depending upon how they are fabricated."
+    },
+    {
+        "id": 4,
+        "name": "Dr. Nick Kelly",
+        "position": "Senior Doctor",
+        "doctorImg": "http://dentario.themerex.net/wp-content/uploads/2016/01/team_4-182x182.jpg",
+        "aboutDoctor": "Types of bridges may vary, depending upon how they are fabricated."
+    },
+    {
+        "id": 5,
+        "name": "Dr.Lamar Baker",
+        "position": "Surgeon",
+        "doctorImg": "https://mediclinic.wpengine.com/wp-content/uploads/2016/05/doctor-1.jpg",
+        "aboutDoctor": "Types of bridges may vary, depending upon how they are fabricated."
+    },
+    {
+        "id": 6,
+        "name": "Dr.Stuart Marshall",
+        "position": "General Pediatrics",
+        "doctorImg": "https://mediclinic.wpengine.com/wp-content/uploads/2016/05/doctor-3.jpg",
+        "aboutDoctor": "Types of bridges may vary, depending upon how they are fabricated."
+    }
+]

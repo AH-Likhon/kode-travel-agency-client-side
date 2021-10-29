@@ -1,0 +1,16 @@
+.bg-img{
+    background-image: url('https://themegoods-cdn-pzbycso8wng.stackpathdns.com/altair/demo/wp-content/uploads/2014/10/1600x1200-12.jpg');
+    background-position: center; 
+   background-repeat: no-repeat; 
+   background-size: cover; 
+}
+
+.icon-style{
+    width: 50px;
+    background-color: #BB2D3B;
+    color: white;
+    font-size: 20px;
+    padding: 15px 10px;
+    border-radius: 60%;
+    margin-top: -20px;
+}

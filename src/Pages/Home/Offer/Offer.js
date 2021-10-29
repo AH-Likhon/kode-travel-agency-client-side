@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Offer = ({ offer }) => {
     // const {offers} = props;
-    const { country, destination, img, about } = offer;
+    const { id, country, destination, img, about } = offer;
     return (
         <div className="custom-offer">
             <Row xs={1} md={1} className="g-4">
@@ -16,9 +16,9 @@ const Offer = ({ offer }) => {
                             <Card.Title className="fw-bold"> {destination} </Card.Title>
                             <Card.Text>{about}</Card.Text>
 
-                            {/* <Link to={`/doctor/${details}`}> */}
-                            <Button className="btn bg-black text-white" >Book Now</Button>
-                            {/* </Link> */}
+                            <Link to={`/offer/${id}`}>
+                                <Button className="btn bg-black text-white" >Book Now</Button>
+                            </Link>
 
                         </Card.Body>
                     </Card>

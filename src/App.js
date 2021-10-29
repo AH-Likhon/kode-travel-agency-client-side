@@ -12,6 +12,9 @@ import Services from './Pages/Home/Services/Services';
 import Footer from './Pages/Footer/Footer';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import Offers from './Pages/Home/Offers/Offers';
+import AddNewOffer from './Pages/AddNewOffer/AddNewOffer';
+import AdminDashboard from './Pages/AdminDashboard/AdminDashboard';
+import OfferDetails from './Pages/Booking/OfferDetails/OfferDetails';
 
 
 
@@ -34,6 +37,12 @@ function App() {
             <Route path="/Offers">
               <Offers></Offers>
             </Route>
+            <Route path="/addNewOffer">
+              <AddNewOffer></AddNewOffer>
+            </Route>
+            <Route path="/adminDashboard">
+              <AdminDashboard></AdminDashboard>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
@@ -43,6 +52,9 @@ function App() {
 
             <PrivateRoute exact path="/doctor/:details">
               <ServiceDetails></ServiceDetails>
+            </PrivateRoute>
+            <PrivateRoute exact path="/offer/:id">
+              <OfferDetails></OfferDetails>
             </PrivateRoute>
 
             <PrivateRoute exact path="/about-us">

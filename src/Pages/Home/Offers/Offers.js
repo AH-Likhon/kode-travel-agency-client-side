@@ -5,7 +5,7 @@ import './Offers.css'
 const Offers = () => {
     const [offers, setOffers] = useState([])
     useEffect(() => {
-        fetch('offers.json')
+        fetch('http://localhost:5000/allOffers')
             .then(res => res.json())
             .then(data => setOffers(data));
     }, [])

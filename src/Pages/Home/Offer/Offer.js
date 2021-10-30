@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 const Offer = ({ offer }) => {
     // const {offers} = props;
-    const { id, country, destination, img, about } = offer;
+    const { id, country, destination, image, about } = offer;
     return (
         <div className="custom-offer">
             <Row xs={1} md={1} className="g-4">
                 <Col>
                     <Card className="h-100">
-                        <Card.Img className="card-img" variant="top" src={img} />
+                        <Card.Img className="card-img" variant="top" src={image} />
                         <Card.Body>
                             <Card.Title> {country} </Card.Title>
                             <Card.Title className="fw-bold"> {destination} </Card.Title>
@@ -19,7 +19,7 @@ const Offer = ({ offer }) => {
 
                             {/* <Link to={`/offer/${id}`}> */}
                             <Link to="/bookNow">
-                                <Button Button className="btn bg-black text-white" >Book Now</Button>
+                                <Button Button className="btn bg-danger border-0 text-white" >Book Now</Button>
                             </Link>
 
                         </Card.Body>

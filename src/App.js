@@ -2,13 +2,10 @@ import './App.css';
 import Home from './Pages/Home/Home/Home'
 import NotFound from './Pages/NotFound/NotFound'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import ServiceDetails from './Pages/Booking/ServiceDetails/ServiceDetails';
 import Login from './Pages/Login/Login/Login';
 import Header from './Pages/Shared/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/Login/PrivateRoute/PrivateRoute';
-import Doctor from './Pages/Doctor/Doctor';
-import Services from './Pages/Home/Services/Services';
 import Footer from './Pages/Footer/Footer';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import Offers from './Pages/Home/Offers/Offers';
@@ -34,9 +31,9 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/services">
+            {/* <Route path="/services">
               <Services></Services>
-            </Route>
+            </Route> */}
             <Route path="/Offers">
               <Offers></Offers>
             </Route>
@@ -56,6 +53,7 @@ function App() {
             {/* <PrivateRoute exact path="/doctor/:details">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute> */}
+
             <PrivateRoute exact path="/bookNow">
               <BookNow></BookNow>
             </PrivateRoute>

@@ -4,4 +4,15 @@
     color: white;
     font-weight: bold;
   }
+.footer-header-color{
+  color: #126DA7;
+}
+  .help-list a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .btn-bg{
+    background-color: #034e7c;
+  }
   

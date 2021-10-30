@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import AddNewOffer from '../AddNewOffer/AddNewOffer';
 import AllOffers from '../AllOffers/AllOffers';
+import MyBooking from '../MyBooking/MyBooking';
+// import manageAllOffers from '../AllOffers/manageAllOffers';
 // import Offers from '../Home/Offers/Offers';
 import './AdminDashboard.css'
 
@@ -14,7 +16,7 @@ const AdminDashboard = () => {
             <div className="dashboard">
                 <div className="admin-box">
                     <div className="row admin-container">
-                        <div className="col-md-3 ">
+                        <div className="col-sm-12 col-md-3 ">
                             <div className="admin-area p-1">
                                 <h6>Dashboard</h6>
                                 <div className="all-menu mt-5">
@@ -22,7 +24,7 @@ const AdminDashboard = () => {
                                         onClick={() => setControl("allOffers")}
                                         className="admin-menu p-2"
                                     >
-                                        All Offers
+                                        Manage All Offers
                                     </li>
                                     <li
                                         onClick={() => setControl("addNewOffer")}
@@ -30,18 +32,18 @@ const AdminDashboard = () => {
                                     >
                                         Add A New Offer
                                     </li>
-                                    {/* <li
-                                        onClick={() => setControl("allEvents")}
+                                    <li
+                                        onClick={() => setControl("myBooked")}
                                         className="admin-menu p-2"
                                     >
-                                        Manage Events
-                                    </li> */}
+                                        My Booked
+                                    </li>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-9 text-center  text-center">
+                        <div className="col-sm--12 col-md-9 text-center  text-center">
                             {control === "allOffers" && <AllOffers></AllOffers>}
-                            {/* {control === "allEvents" && <Offers></Offers>} */}
+                            {control === "myBooked" && <MyBooking></MyBooking>}
                             {control === "addNewOffer" && <AddNewOffer></AddNewOffer>}
                         </div>
                     </div>

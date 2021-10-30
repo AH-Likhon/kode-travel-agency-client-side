@@ -10,18 +10,24 @@ const AddNewOffer = () => {
         register,
         handleSubmit,
         watch,
+        reset,
         formState: { errors },
     } = useForm();
 
     const onSubmit = (data) => {
         data.email = user?.email;
-        fetch("http://localhost:5000/addEvent", {
+        fetch("http://localhost:5000/offers", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
         })
-            .then((res) => res.json())
-            .then((result) => console.log(result));
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Successfully Added');
+                    reset();
+                }
+            });
         console.log(data);
     };
 

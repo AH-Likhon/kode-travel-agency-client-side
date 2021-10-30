@@ -16,8 +16,10 @@ const Offer = ({ offer }) => {
                             <Card.Title className="fw-bold"> {destination} </Card.Title>
                             <Card.Text>{about}</Card.Text>
 
-                            <Link to={`/offer/${id}`}>
-                                <Button className="btn bg-black text-white" >Book Now</Button>
+
+                            {/* <Link to={`/offer/${id}`}> */}
+                            <Link to="/bookNow">
+                                <Button Button className="btn bg-black text-white" >Book Now</Button>
                             </Link>
 
                         </Card.Body>

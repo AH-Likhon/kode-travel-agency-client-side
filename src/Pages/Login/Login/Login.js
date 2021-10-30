@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router";
 import useAuth from "../../../hooks/useAuth";
 import useFirebase from "../../../hooks/useFirebase";
+import man from '../../../images/man.png';
+import airplane from '../../../images/airplane1.png';
+import google from '../../../images/google.png';
 
 
 const Login = () => {
@@ -47,9 +50,9 @@ const Login = () => {
   return (
     <div className="div d-flex justify-content-center align-items-center py-5">
       <div className="row ">
-        <div className="col-md-6">
-          <div>
-            <div className="form-input mt-5">
+        <div className="col-md-6 mt-5">
+          <div className="my-5">
+            {/* <div className="form-input mt-5">
               <input
                 onChange={hanldeEmail}
                 className="mt-2 p-2"
@@ -75,13 +78,11 @@ const Login = () => {
                   Login
                 </button>
               </div>
-            </div>
-            <div className="login-btn mt-4">
-              <button
-                onClick={handleGoogleLogin}
-                className="btn btn-warning m-2"
-              >
-                Google SignIn
+            </div> */}
+            <div className="login-btn my-5">
+              <button onClick={handleGoogleLogin} className="btn btn-secondary m-2 fw-bold" >
+                Signin With
+                <img src={google} alt="" />
               </button>
 
             </div>
@@ -89,11 +90,7 @@ const Login = () => {
         </div>
         <div className="col-md-6">
           <div className="right-side-image">
-            <img
-              className="w-100"
-              src="https://www.narchar.com/assets/images/login-img.png"
-              alt=""
-            />
+            <img className="w-100" src={man} alt="" />
           </div>
           ;
         </div>

@@ -1,59 +1,68 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 
-const AllOffers = () => {
-    const [offers, setOffers] = useState([]);
+const MyBooking = () => {
+    const { user } = useFirebase();
+    const [booked, setBooked] = useState([]);
 
-    const [control, setControl] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/allOffers")
+        fetch(`http://localhost:5000/myBooking/${user?.email}`)
             .then((res) => res.json())
-            .then((data) => setOffers(data));
-    }, [offers]);
+            .then((data) => setBooked(data));
+    }, [user.email]);
 
     const handleDelete = (id) => {
         const proceed = window.confirm('Do you want to delete?');
         if (proceed) {
-            fetch(`http://localhost:5000/allOffers/${id}`, {
+            fetch(`http://localhost:5000/myBooking/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
                 .then((res) => res.json())
                 .then((data) => {
-                    if (data.deletedCount > 0) {
+                    console.log(data);
+                    if (data.deletedCount) {
                         alert('Succesfully Deleted');
-                        setControl(!control);
-                    } else {
-                        setControl(false);
+                        const remaining = booked.filter(book => book._id !== id);
+                        setBooked(remaining);
                     }
                 });
         }
         console.log(id);
     };
 
+    console.log(booked);
     return (
-        <div className="container">
-            <h1>Offers {offers?.length}</h1>
+        <div>
+            <h1>My Booked : {booked.length}</h1>
+
             <Table striped bordered hover>
                 <thead>
                     <tr>
                         <th>SI</th>
-                        <th>Country</th>
-                        <th>Destination</th>
-                        <th>About</th>
-                        <th>Image Link</th>
-                        <th>Action</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Status</th>
+                        <th>Update</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
-                {offers?.map((pd, index) => (
+                {booked?.map((pd, index) => (
                     <tbody key={pd._id}>
                         <tr>
                             <td>{index}</td>
-                            <td>{pd.country}</td>
-                            <td>{pd.destination}</td>
-                            <td>{pd.about}</td>
-                            <td>{pd.image}</td>
+                            <td>{pd.name}</td>
+                            <td>{pd.email}</td>
+                            <td>{pd.address}</td>
+                            <td>{pd.status}</td>
+                            <td>
+                                <Link to={`/myBooking/update/${pd._id}`}><button className="btn bg-danger p-2">Update</button></Link>
+
+                            </td>
                             <td>
                                 <button
                                     onClick={() => handleDelete(pd._id)}
@@ -69,7 +78,6 @@ const AllOffers = () => {
             </Table>
         </div>
     );
-
 };
 
-export default AllOffers;
+export default MyBooking;

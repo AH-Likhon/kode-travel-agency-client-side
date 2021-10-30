@@ -15,6 +15,9 @@ import Offers from './Pages/Home/Offers/Offers';
 import AddNewOffer from './Pages/AddNewOffer/AddNewOffer';
 import AdminDashboard from './Pages/AdminDashboard/AdminDashboard';
 import OfferDetails from './Pages/Booking/OfferDetails/OfferDetails';
+import BookNow from './Pages/BookNow/BookNow';
+import MyBooking from './Pages/MyBooking/MyBooking';
+import UpdateMyBooking from './Pages/UpdateMyBooking/UpdateMyBooking';
 
 
 
@@ -46,13 +49,22 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <PrivateRoute exact path="/doctor">
+            {/* <PrivateRoute exact path="/doctor">
               <Doctor></Doctor>
-            </PrivateRoute>
+            </PrivateRoute> */}
 
-            <PrivateRoute exact path="/doctor/:details">
+            {/* <PrivateRoute exact path="/doctor/:details">
               <ServiceDetails></ServiceDetails>
+            </PrivateRoute> */}
+            <PrivateRoute exact path="/bookNow">
+              <BookNow></BookNow>
             </PrivateRoute>
+            <Route exact path="/myBooking">
+              <MyBooking></MyBooking>
+            </Route>
+            <Route path="/myBooking/update/:id">
+              <UpdateMyBooking></UpdateMyBooking>
+            </Route>
             <PrivateRoute exact path="/offer/:id">
               <OfferDetails></OfferDetails>
             </PrivateRoute>

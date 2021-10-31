@@ -5,7 +5,7 @@ import './Offers.css'
 const Offers = () => {
     const [offers, setOffers] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/allOffers')
+        fetch('https://infinite-garden-01511.herokuapp.com/allOffers')
             .then(res => res.json())
             .then(data => setOffers(data));
     }, [])
@@ -18,7 +18,7 @@ const Offers = () => {
             <div className="container my-5 offer-container">
                 {
                     offers.map(offer => <Offer
-                        key={offer.id}
+                        key={offer._id}
                         offer={offer}
                     ></Offer>)
                 }

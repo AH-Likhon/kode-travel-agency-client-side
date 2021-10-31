@@ -1,15 +1,11 @@
-.admin-area {
-    background: #000;
-    color: white;
-    height: 100vh;
+.list-style{
+    background-color: #126DA7;
+    height: 300px;
   }
-  .admin-container {
-    overflow-x: hidden;
-  }
-  .admin-menu {
+
+.list-style ul li{
     list-style: none;
     cursor: pointer;
-  }
-  .admin-menu:hover {
-    color: blue;
+    color: white;
+    font-size: 20px;
   }

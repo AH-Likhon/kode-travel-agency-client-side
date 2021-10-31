@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
 import useFirebase from '../../hooks/useFirebase';
 
 const AddNewOffer = () => {
     const { user } = useFirebase();
-    const {
-        register,
-        handleSubmit,
-        watch,
-        reset,
-        formState: { errors },
-    } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
         data.email = user?.email;
-        fetch("http://localhost:5000/offers", {
+        fetch("https://infinite-garden-01511.herokuapp.com/offers", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -28,13 +20,13 @@ const AddNewOffer = () => {
                     reset();
                 }
             });
-        console.log(data);
+        // console.log(data);
     };
 
     return (
         <div className="my-5">
-            <h1 className="text-center text-danger">Please, Add A New Offer</h1>
             <div className="w-50 m-auto my-3">
+                <h3 className="text-center text-danger">Please, Add A New Offer</h3>
                 <div className="border ">
                     <div className="login-form my-3">
                         <form onSubmit={handleSubmit(onSubmit)}>

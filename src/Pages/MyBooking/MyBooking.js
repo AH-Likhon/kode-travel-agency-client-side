@@ -9,7 +9,7 @@ const MyBooking = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myBooking/${user?.email}`)
+        fetch(`https://infinite-garden-01511.herokuapp.com/myBooking/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setBooked(data));
     }, [user.email]);
@@ -17,7 +17,7 @@ const MyBooking = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Do you want to delete?');
         if (proceed) {
-            fetch(`http://localhost:5000/myBooking/${id}`, {
+            fetch(`https://infinite-garden-01511.herokuapp.com/myBooking/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
@@ -36,10 +36,12 @@ const MyBooking = () => {
 
     console.log(booked);
     return (
-        <div>
+        <div className="w-100">
             <h1>My Booked : {booked.length}</h1>
 
-            <Table striped bordered hover>
+            {/* Tables are responsive as horizontally(left to right) scrolling using bootstrap */}
+
+            <Table responsive="sm" striped bordered hover>
                 <thead>
                     <tr>
                         <th>SI</th>
@@ -51,22 +53,23 @@ const MyBooking = () => {
                         <th>Delete</th>
                     </tr>
                 </thead>
+
                 {booked?.map((pd, index) => (
                     <tbody key={pd._id}>
                         <tr>
-                            <td>{index}</td>
+                            <td>{index + 1}</td>
                             <td>{pd.name}</td>
                             <td>{pd.email}</td>
                             <td>{pd.address}</td>
                             <td>{pd.status}</td>
                             <td>
-                                <Link to={`/myBooking/update/${pd._id}`}><button className="btn bg-danger p-2">Update</button></Link>
+                                <Link to={`/myBooking/update/${pd._id}`}><button className="btn table-btn p-2">Update</button></Link>
 
                             </td>
                             <td>
                                 <button
                                     onClick={() => handleDelete(pd._id)}
-                                    className="btn bg-danger p-2"
+                                    className="btn table-btn p-2"
                                 >
                                     Delete
                                 </button>

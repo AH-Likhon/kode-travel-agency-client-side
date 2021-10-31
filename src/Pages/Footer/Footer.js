@@ -1,9 +1,6 @@
 import React from 'react';
 import { Col, Container, Form, Row, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
-import img1 from '../../images/news-img-1.jpg';
-import img2 from '../../images/news-img-2.jpg';
 import './Footer.css'
 
 const Footer = () => {
@@ -25,14 +22,6 @@ const Footer = () => {
                             <a href="#">Privacy Policy</a><br />
                             <a href="#">EMI</a><br />
                         </div>
-                        {/* <div className="d-flex justify-content-between align-items-center">
-                            <img className="rounded-circle" src={img1} alt="" />
-                            <small>Dental patients given increased protection</small>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mt-2">
-                            <img className="rounded-circle" src={img2} alt="" />
-                            <small>Best Wedding Day Smile with Dentistry Procedures</small>
-                        </div> */}
                     </Col>
                     <Col xs={12} md={4}>
                         <h3 className="footer-header-color mt-2">Contact Us</h3>

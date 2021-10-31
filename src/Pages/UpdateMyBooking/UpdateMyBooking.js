@@ -7,17 +7,16 @@ const UpdateMyBooking = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `http://localhost:5000/myBooking/${id}`;
+        const url = `https://infinite-garden-01511.herokuapp.com/myBooking/${id}`;
 
         fetch(url)
             .then(res => res.json())
             .then(data => setBooking(data))
-    }, [])
+    }, []);
 
-    //update user
+    //update myBooking
     const updateNameChange = e => {
         const updateName = e.target.value;
-        // const updateBooking = { name: updateName, email: booking.email };
         const updateBooking = { ...booking };
         updateBooking.name = updateName;
         setBooking(updateBooking);
@@ -55,7 +54,7 @@ const UpdateMyBooking = () => {
     }
 
     const handleUpdateBooking = e => {
-        const url = `http://localhost:5000/myBooking/${id}`;
+        const url = `https://infinite-garden-01511.herokuapp.com/myBooking/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -66,8 +65,8 @@ const UpdateMyBooking = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
-                    alert('Successfully Added');
-                    setBooking({});
+                    alert('Successfully Updated');
+                    setBooking(booking);
                 }
             })
 
@@ -88,7 +87,6 @@ const UpdateMyBooking = () => {
                         <h4>Update City: {booking.city}</h4>
                         <h4>Update Status: {booking.status}</h4>
                         <h4>Update Phone: {booking.phone}</h4>
-                        {/* <p><small>{id}</small></p> */}
                     </Col>
 
                     <Col xs={12} md={6}>
@@ -106,8 +104,6 @@ const UpdateMyBooking = () => {
                             <input type="number" className="m-2 w-50" onChange={updatePhoneChange} value={booking.phone || ''} placeholder="Phone Number" /><br />
 
                             <input type="submit" value="Update" />
-
-                            {/* <input type="button" value="Update" className="w-25 btn btn-danger" /> */}
 
                         </form>
                     </Col>

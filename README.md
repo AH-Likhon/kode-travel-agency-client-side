@@ -3,8 +3,8 @@
 Live Site: https://kode-travel-agency.web.app/
 
 Main Points:
-- This is a one kind of travel agency website
-- Visiting this website users can login with their Google account
-- Users can book any package to travel/visit this package Tourist Spot
-- Users can also add their tour package if their wants by clicking on "Add A New Offer" Link in header. This is a private page. To submit their package, first they need to login. Then they can submit their submit. Their submitted package will add with All Offers List after their submition.
-- After login, users can see their "Dashboard". In Dashboard, they can see "Manage All Offers", "My Booked" Link. In "Manage All Offers", they can see all offers of this website. If they want, they can delete any offer by click on "Delete" button. Also, in "My Booked", they can see their booking information as their profile. If they want, they can update and delete any bookingf information.
+- This is one kind of travel agency website.
+- On this website, users can log in or register using a username, password, or Google authentication (OAuth2).
+- Users can book any package to travel with this package.
+- Users can also add their own tour package if they want by clicking on the "Add A New Offer" link in the header. This is a private page. To submit their package, first they need to login. Then they can submit their submission. Their submitted package will be added to the "All Offers List" after their submission.
+- After login, users can see their "dashboard". On the dashboard, they can see the "Manage All Offers" and "My Booked" links. In "Manage All Offers", they can see all the offers on this website. If they want, they can delete any offer by clicking on the "Delete" button. Also, in "My Booked", they can see their booking information in the same profile. If they want, they can update and delete any booking information.

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import AddNewOffer from '../AddNewOffer/AddNewOffer';
+import AllBooked from '../AllBooked/AllBooked';
 import AllOffers from '../AllOffers/AllOffers';
 import MyBooking from '../MyBooking/MyBooking';
 import './AdminDashboard.css'
@@ -22,6 +23,11 @@ const AdminDashboard = () => {
                                 Manage All Offers
                             </li>
 
+                            <li onClick={() => setControl("allBooked")}
+                                className="admin-menu p-2">
+                                Manage All Booked
+                            </li>
+
                             <li onClick={() => setControl("myBooked")}
                                 className="admin-menu p-2">
                                 My Booked
@@ -37,6 +43,7 @@ const AdminDashboard = () => {
                     <Col sm={12} md={8}>
                         <div className="w-100">
                             {control === "allOffers" && <AllOffers></AllOffers>}
+                            {control === "allBooked" && <AllBooked></AllBooked>}
                             {control === "myBooked" && <MyBooking></MyBooking>}
                             {control === "addNewOffer" && <AddNewOffer></AddNewOffer>}
                         </div>

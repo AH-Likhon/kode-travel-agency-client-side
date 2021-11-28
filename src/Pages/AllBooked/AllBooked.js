@@ -56,7 +56,7 @@ const AllBooked = () => {
     return (
         <div className="w-100">
             {/* <h1>My Booked : </h1> */}
-            <h1>My Booked : {booked.length}</h1>
+            <h1>All Booked : {booked.length}</h1>
 
             {/* Tables are responsive as horizontally(left to right) scrolling using bootstrap */}
 

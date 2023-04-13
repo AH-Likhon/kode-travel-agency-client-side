@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "kode-travel-agency"
-  }
+    "default": "kode-travel-agency",
+    "staging": "kode-travel-agency-c5df8"
+  },
+  "targets": {},
+  "etags": {}
 }

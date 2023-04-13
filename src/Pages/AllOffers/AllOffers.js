@@ -8,7 +8,7 @@ const AllOffers = () => {
     const [control, setControl] = useState(false);
 
     useEffect(() => {
-        fetch("https://infinite-garden-01511.herokuapp.com/allOffers")
+        fetch("https://travel-server-j1sq.onrender.com/allOffers")
             .then((res) => res.json())
             .then((data) => setOffers(data));
     }, [offers]);
@@ -16,7 +16,7 @@ const AllOffers = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Do you want to delete?');
         if (proceed) {
-            fetch(`https://infinite-garden-01511.herokuapp.com/allOffers/${id}`, {
+            fetch(`https://travel-server-j1sq.onrender.com/allOffers/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })

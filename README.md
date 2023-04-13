@@ -1,8 +1,9 @@
 <h4>Kode Travel Agency</h4>
 
-Live Site: https://kode-travel-agency-c5df8.firebaseapp.com/
+Live Site: https://kode-travel-agency-c5df8.web.app
 
 Main Points:
+
 - This is one kind of travel agency website.
 - On this website, users can log in or register using a username, password, or Google authentication (OAuth2).
 - Users can book any package to travel with this package.

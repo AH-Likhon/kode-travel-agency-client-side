@@ -7,7 +7,7 @@ const UpdateMyBooking = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `https://infinite-garden-01511.herokuapp.com/myBooking/${id}`;
+        const url = `https://travel-server-j1sq.onrender.com/myBooking/${id}`;
 
         fetch(url)
             .then(res => res.json())
@@ -54,7 +54,7 @@ const UpdateMyBooking = () => {
     }
 
     const handleUpdateBooking = e => {
-        const url = `https://infinite-garden-01511.herokuapp.com/myBooking/${id}`;
+        const url = `https://travel-server-j1sq.onrender.com/myBooking/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

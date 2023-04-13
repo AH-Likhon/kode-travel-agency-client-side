@@ -8,7 +8,7 @@ const AddNewOffer = () => {
 
     const onSubmit = (data) => {
         data.email = user?.email;
-        fetch("https://infinite-garden-01511.herokuapp.com/offers", {
+        fetch("https://travel-server-j1sq.onrender.com/offers", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

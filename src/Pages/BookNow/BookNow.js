@@ -12,7 +12,7 @@ const BookNow = () => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     useEffect(() => {
-        const url = `https://infinite-garden-01511.herokuapp.com/allOffers/${id}`;
+        const url = `https://travel-server-j1sq.onrender.com/allOffers/${id}`;
 
         fetch(url)
             .then(res => res.json())
@@ -21,7 +21,7 @@ const BookNow = () => {
 
     const onSubmit = (data) => {
         data.status = "Pending";
-        fetch("https://infinite-garden-01511.herokuapp.com/booking", {
+        fetch("https://travel-server-j1sq.onrender.com/booking", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

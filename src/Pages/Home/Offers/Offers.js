@@ -5,7 +5,7 @@ import './Offers.css'
 const Offers = () => {
     const [offers, setOffers] = useState([])
     useEffect(() => {
-        fetch('https://infinite-garden-01511.herokuapp.com/allOffers')
+        fetch('https://travel-server-j1sq.onrender.com/allOffers')
             .then(res => res.json())
             .then(data => setOffers(data));
     }, [])

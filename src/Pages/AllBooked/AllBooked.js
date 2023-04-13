@@ -7,7 +7,7 @@ const AllBooked = () => {
 
 
     useEffect(() => {
-        const url = `https://infinite-garden-01511.herokuapp.com/booking`;
+        const url = `https://travel-server-j1sq.onrender.com/booking`;
         fetch(url)
             .then(res => res.json())
             .then(data => setbooked(data))
@@ -16,7 +16,7 @@ const AllBooked = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Do you want to delete?');
         if (proceed) {
-            fetch(`https://infinite-garden-01511.herokuapp.com/booking/${id}`, {
+            fetch(`https://travel-server-j1sq.onrender.com/booking/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
@@ -38,7 +38,7 @@ const AllBooked = () => {
     const handleUpdate = (id) => {
         const proceed = window.confirm('Do you want to update?');
         if (proceed) {
-            fetch(`https://infinite-garden-01511.herokuapp.com/booking/${id}`, {
+            fetch(`https://travel-server-j1sq.onrender.com/booking/${id}`, {
                 method: "PUT",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(booked)
